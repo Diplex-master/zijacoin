@@ -1,11 +1,12 @@
 // Copyright (c) 2017-2018 The PIVX developers
 // Copyright (c) 2017-2018 The HUZU developers
-// Copyright (c) 2018 The ZIJA developers
+// Copyright (c) 2018-2019 The ZIJA developers
+// Copyright (c) 2019 The DLX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ZZIJACONTROLDIALOG_H
-#define ZZIJACONTROLDIALOG_H
+#ifndef ZDLXCONTROLDIALOG_H
+#define ZDLXCONTROLDIALOG_H
 
 #include <QDialog>
 #include <QTreeWidgetItem>
@@ -16,16 +17,16 @@ class CZerocoinMint;
 class WalletModel;
 
 namespace Ui {
-class ZZijaControlDialog;
+class ZDiplexCoinControlDialog;
 }
 
-class ZZijaControlDialog : public QDialog
+class ZDiplexCoinControlDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit ZZijaControlDialog(QWidget *parent);
-    ~ZZijaControlDialog();
+    explicit ZDiplexCoinControlDialog(QWidget *parent);
+    ~ZDiplexCoinControlDialog();
 
     void setModel(WalletModel* model);
 
@@ -34,7 +35,7 @@ public:
     static std::vector<CMintMeta> GetSelectedMints();
 
 private:
-    Ui::ZZijaControlDialog *ui;
+    Ui::ZDiplexCoinControlDialog *ui;
     WalletModel* model;
     PrivacyDialog* privacyDialog;
 
@@ -55,4 +56,4 @@ private slots:
     void ButtonAllClicked();
 };
 
-#endif // ZZIJACONTROLDIALOG_H
+#endif // ZDLXCONTROLDIALOG_H

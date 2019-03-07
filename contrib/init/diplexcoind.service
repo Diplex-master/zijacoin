@@ -1,0 +1,26 @@
+[Unit]
+Description=DLX's distributed currency daemon
+After=network.target
+
+[Service]
+User=diplexcoin
+Group=diplexcoin
+
+Type=forking
+PIDFile=/var/lib/diplexcoind/diplexcoind.pid
+
+ExecStart=/usr/bin/diplexcoind -daemon -pid=/var/lib/diplexcoind/diplexcoind.pid \
+          -conf=/etc/diplexcoin/diplexcoin.conf -datadir=/var/lib/diplexcoind
+
+ExecStop=-/usr/bin/diplexcoin-cli -conf=/etc/diplexcoin/diplexcoin.conf \
+         -datadir=/var/lib/diplexcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=DLX
+Comment=DLX P2P Cryptocurrency
+Exec=diplexcoin-qt %u
+Terminal=false
+Type=Application
+Icon=diplexcoin128
+MimeType=x-scheme-handler/diplexcoin;
+Categories=Office;Finance;
+Name[en_US]=diplexcoin-qt.desktop

@@ -168,7 +168,7 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../zija.qrc"/>
+  <include location="../diplexcoin.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -3,7 +3,8 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
 // Copyright (c) 2017-2018 The HUZU developers
-// Copyright (c) 2018 The ZIJA developers
+// Copyright (c) 2018-2019 The ZIJA developers
+// Copyright (c) 2019 The DLX developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -125,7 +126,7 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
         zpivObj.push_back(Pair(to_string(denom), ValueFromAmount(blockindex->mapZerocoinSupply.at(denom) * (denom*COIN))));
     }
     zpivObj.push_back(Pair("total", ValueFromAmount(blockindex->GetZerocoinSupply())));
-    result.push_back(Pair("zZIJAsupply", zpivObj));
+    result.push_back(Pair("zDLXsupply", zpivObj));
 
     return result;
 }
@@ -245,7 +246,7 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
             "{                           (json object)\n"
             "  \"transactionid\" : {       (json object)\n"
             "    \"size\" : n,             (numeric) transaction size in bytes\n"
-            "    \"fee\" : n,              (numeric) transaction fee in zija\n"
+            "    \"fee\" : n,              (numeric) transaction fee in diplexcoin\n"
             "    \"time\" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT\n"
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
@@ -325,17 +326,17 @@ UniValue getblock(const UniValue& params, bool fHelp)
             "  \"previousblockhash\" : \"hash\",  (string) The hash of the previous block\n"
             "  \"nextblockhash\" : \"hash\"       (string) The hash of the next block\n"
             "  \"moneysupply\" : \"supply\"       (numeric) The money supply when this block was added to the blockchain\n"
-            "  \"zZIJAsupply\" :\n"
+            "  \"zDLXsupply\" :\n"
             "  {\n"
-            "     \"1\" : n,            (numeric) supply of 1 zZIJA denomination\n"
-            "     \"5\" : n,            (numeric) supply of 5 zZIJA denomination\n"
-            "     \"10\" : n,           (numeric) supply of 10 zZIJA denomination\n"
-            "     \"50\" : n,           (numeric) supply of 50 zZIJA denomination\n"
-            "     \"100\" : n,          (numeric) supply of 100 zZIJA denomination\n"
-            "     \"500\" : n,          (numeric) supply of 500 zZIJA denomination\n"
-            "     \"1000\" : n,         (numeric) supply of 1000 zZIJA denomination\n"
-            "     \"5000\" : n,         (numeric) supply of 5000 zZIJA denomination\n"
-            "     \"total\" : n,        (numeric) The total supply of all zZIJA denominations\n"
+            "     \"1\" : n,            (numeric) supply of 1 zDLX denomination\n"
+            "     \"5\" : n,            (numeric) supply of 5 zDLX denomination\n"
+            "     \"10\" : n,           (numeric) supply of 10 zDLX denomination\n"
+            "     \"50\" : n,           (numeric) supply of 50 zDLX denomination\n"
+            "     \"100\" : n,          (numeric) supply of 100 zDLX denomination\n"
+            "     \"500\" : n,          (numeric) supply of 500 zDLX denomination\n"
+            "     \"1000\" : n,         (numeric) supply of 1000 zDLX denomination\n"
+            "     \"5000\" : n,         (numeric) supply of 5000 zDLX denomination\n"
+            "     \"total\" : n,        (numeric) The total supply of all zDLX denominations\n"
             "  }\n"
             "}\n"
 
@@ -487,8 +488,8 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of zija addresses\n"
-            "     \"zijaaddress\"   	 	(string) zija address\n"
+            "     \"addresses\" : [          (array of string) array of diplexcoin addresses\n"
+            "     \"diplexcoinaddress\"   	 	(string) diplexcoin address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"

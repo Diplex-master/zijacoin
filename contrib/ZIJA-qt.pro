@@ -78,7 +78,7 @@ HEADERS += src/activemasternode.h \
            src/crypter.h \
            src/obfuscation-relay.h \
            src/obfuscation.h \
-           src/zija-config.h \
+           src/diplexcoin-config.h \
            src/db.h \
            src/eccryptoverify.h \
            src/ecwrapper.h \
@@ -131,7 +131,7 @@ HEADERS += src/activemasternode.h \
            src/wallet_ismine.h \
            src/walletdb.h \
            src/compat/sanity.h \
-           src/config/zija-config.h \
+           src/config/diplexcoin-config.h \
            src/crypto/common.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
@@ -332,7 +332,7 @@ HEADERS += src/activemasternode.h \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.h \
            src/crypto/aes_helper.c \
            src/qt/bitcoinamountfield.moc \
-           src/qt/zija.moc \
+           src/qt/diplexcoin.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc \
@@ -373,9 +373,9 @@ SOURCES += src/activemasternode.cpp \
            src/crypter.cpp \
            src/obfuscation-relay.cpp \
            src/obfuscation.cpp \
-           src/zija-cli.cpp \
-           src/zija-tx.cpp \
-           src/zija.cpp \
+           src/diplexcoin-cli.cpp \
+           src/diplexcoin-tx.cpp \
+           src/diplexcoin.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -470,8 +470,8 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/obfuscationconfig.cpp \
-           src/qt/zija.cpp \
-           src/qt/zijastrings.cpp \
+           src/qt/diplexcoin.cpp \
+           src/qt/diplexcoinstrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -549,7 +549,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_zija.cpp \
+           src/test/test_diplexcoin.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -640,21 +640,21 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/zija.qrc src/qt/zija_locale.qrc
+RESOURCES += src/qt/diplexcoin.qrc src/qt/diplexcoin_locale.qrc
 
-TRANSLATIONS += src/qt/locale/zija_bg.ts \
-                src/qt/locale/zija_de.ts \
-                src/qt/locale/zija_en.ts \
-                src/qt/locale/zija_es.ts \
-                src/qt/locale/zija_fi.ts \
-                src/qt/locale/zija_fr.ts \
-                src/qt/locale/zija_it.ts \
-                src/qt/locale/zija_ja.ts \
-                src/qt/locale/zija_pl.ts \
-                src/qt/locale/zija_pt.ts \
-                src/qt/locale/zija_ru.ts \
-                src/qt/locale/zija_sk.ts \
-                src/qt/locale/zija_sv.ts \
-                src/qt/locale/zija_vi.ts \
-                src/qt/locale/zija_zh_CN.ts \
-                src/qt/locale/zija_zh_TW.ts
+TRANSLATIONS += src/qt/locale/diplexcoin_bg.ts \
+                src/qt/locale/diplexcoin_de.ts \
+                src/qt/locale/diplexcoin_en.ts \
+                src/qt/locale/diplexcoin_es.ts \
+                src/qt/locale/diplexcoin_fi.ts \
+                src/qt/locale/diplexcoin_fr.ts \
+                src/qt/locale/diplexcoin_it.ts \
+                src/qt/locale/diplexcoin_ja.ts \
+                src/qt/locale/diplexcoin_pl.ts \
+                src/qt/locale/diplexcoin_pt.ts \
+                src/qt/locale/diplexcoin_ru.ts \
+                src/qt/locale/diplexcoin_sk.ts \
+                src/qt/locale/diplexcoin_sv.ts \
+                src/qt/locale/diplexcoin_vi.ts \
+                src/qt/locale/diplexcoin_zh_CN.ts \
+                src/qt/locale/diplexcoin_zh_TW.ts

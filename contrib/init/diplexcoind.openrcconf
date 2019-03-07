@@ -1,0 +1,26 @@
+# /etc/conf.d/diplexcoind: config file for /etc/init.d/diplexcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/diplexcoin/diplexcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/diplexcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/diplexcoind.pid"
+
+# Where to write diplexcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/diplexcoind"
+
+# User and group to own diplexcoind process
+#BITCOIND_USER="diplexcoin"
+#BITCOIND_GROUP="diplexcoin"
+
+# Path to diplexcoind executable
+#BITCOIND_BIN="/usr/bin/diplexcoind"
+
+# Nice value to run diplexcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

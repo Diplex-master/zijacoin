@@ -1,7 +1,8 @@
 // Copyright (c) 2014 The Bitcoin developers
 // Copyright (c) 2017 The PIVX developers
 // Copyright (c) 2017-2018 The HUZU developers
-// Copyright (c) 2018 The ZIJA developers
+// Copyright (c) 2018-2019 The ZIJA developers
+// Copyright (c) 2019 The DLX developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,8 +13,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between zija-cli and zijad)
- * of a given instance of the Zija system.
+ * CBaseChainParams defines the base parameters (shared between diplexcoin-cli and diplexcoind)
+ * of a given instance of the DiplexCoin system.
  */
 class CBaseChainParams
 {

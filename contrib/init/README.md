@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: zijad.service
-Upstart: zijad.conf
-OpenRC:  zijad.openrc
-         zijad.openrcconf
-CentOS:  zijad.init
+SystemD: diplexcoind.service
+Upstart: diplexcoind.conf
+OpenRC:  diplexcoind.openrc
+         diplexcoind.openrcconf
+CentOS:  diplexcoind.init
 
 have been made available to assist packagers in creating node packages here.
 

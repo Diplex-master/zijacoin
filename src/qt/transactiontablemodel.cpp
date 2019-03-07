@@ -2,7 +2,8 @@
 // Copyright (c) 2014-2016 The Dash developers
 // Copyright (c) 2016-2018 The PIVX developers
 // Copyright (c) 2017-2018 The HUZU developers
-// Copyright (c) 2018 The ZIJA developers
+// Copyright (c) 2018-2019 The ZIJA developers
+// Copyright (c) 2019 The DLX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -346,9 +347,9 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
     case TransactionRecord::SendToSelf:
         return tr("Payment to yourself");
     case TransactionRecord::StakeMint:
-        return tr("ZIJA Stake");
-    case TransactionRecord::StakeZZIJA:
-        return tr("zZIJA Stake");
+        return tr("DLX Stake");
+    case TransactionRecord::StakeZDLX:
+        return tr("zDLX Stake");
     case TransactionRecord::Generated:
         return tr("Mined");
     case TransactionRecord::ObfuscationDenominate:
@@ -362,15 +363,15 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
     case TransactionRecord::Obfuscated:
         return tr("Obfuscated");
     case TransactionRecord::ZerocoinMint:
-        return tr("Converted ZIJA to zZIJA");
+        return tr("Converted DLX to zDLX");
     case TransactionRecord::ZerocoinSpend:
-        return tr("Spent zZIJA");
+        return tr("Spent zDLX");
     case TransactionRecord::RecvFromZerocoinSpend:
-        return tr("Received ZIJA from zZIJA");
-    case TransactionRecord::ZerocoinSpend_Change_zZija:
-        return tr("Minted Change as zZIJA from zZIJA Spend");
+        return tr("Received DLX from zDLX");
+    case TransactionRecord::ZerocoinSpend_Change_zDiplexCoin:
+        return tr("Minted Change as zDLX from zDLX Spend");
     case TransactionRecord::ZerocoinSpend_FromMe:
-        return tr("Converted zZIJA to ZIJA");
+        return tr("Converted zDLX to DLX");
 
     default:
         return QString();
@@ -382,7 +383,7 @@ QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord* wtx
     switch (wtx->type) {
     case TransactionRecord::Generated:
     case TransactionRecord::StakeMint:
-    case TransactionRecord::StakeZZIJA:
+    case TransactionRecord::StakeZDLX:
     case TransactionRecord::MNReward:
         return QIcon(":/icons/tx_mined");
     case TransactionRecord::RecvWithObfuscation:
@@ -425,10 +426,10 @@ QString TransactionTableModel::formatTxToAddress(const TransactionRecord* wtx, b
     case TransactionRecord::SendToOther:
         return QString::fromStdString(wtx->address) + watchAddress;
     case TransactionRecord::ZerocoinMint:
-    case TransactionRecord::ZerocoinSpend_Change_zZija:
-        return tr("Anonymous (zZIJA Transaction)");
-    case TransactionRecord::StakeZZIJA:
-        return tr("Anonymous (zZIJA Stake)");
+    case TransactionRecord::ZerocoinSpend_Change_zDiplexCoin:
+        return tr("Anonymous (zDLX Transaction)");
+    case TransactionRecord::StakeZDLX:
+        return tr("Anonymous (zDLX Stake)");
     case TransactionRecord::SendToSelf:
     default:
         return tr("(n/a)") + watchAddress;

@@ -3,7 +3,8 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
 // Copyright (c) 2017-2018 The HUZU developers
-// Copyright (c) 2018 The ZIJA developers
+// Copyright (c) 2018-2019 The ZIJA developers
+// Copyright (c) 2019 The DLX developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -265,11 +266,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop ZIJA server.");
+            "\nStop DLX server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "ZIJA server stopping";
+    return "DLX server stopping";
 }
 
 
@@ -353,37 +354,37 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* ZIJA features */
-        {"zija", "masternode", &masternode, true, true, false},
-        {"zija", "listmasternodes", &listmasternodes, true, true, false},
-        {"zija", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"zija", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"zija", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"zija", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"zija", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
-        {"zija", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"zija", "masternodedebug", &masternodedebug, true, true, false},
-        {"zija", "startmasternode", &startmasternode, true, true, false},
-        {"zija", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"zija", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"zija", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"zija", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"zija", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"zija", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"zija", "mnbudget", &mnbudget, true, true, false},
-        {"zija", "preparebudget", &preparebudget, true, true, false},
-        {"zija", "submitbudget", &submitbudget, true, true, false},
-        {"zija", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"zija", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"zija", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"zija", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"zija", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"zija", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"zija", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"zija", "checkbudgets", &checkbudgets, true, true, false},
-        {"zija", "mnsync", &mnsync, true, true, false},
-        {"zija", "spork", &spork, true, true, false},
-        {"zija", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* DLX features */
+        {"diplexcoin", "masternode", &masternode, true, true, false},
+        {"diplexcoin", "listmasternodes", &listmasternodes, true, true, false},
+        {"diplexcoin", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"diplexcoin", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"diplexcoin", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
+        {"diplexcoin", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
+        {"diplexcoin", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
+        {"diplexcoin", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"diplexcoin", "masternodedebug", &masternodedebug, true, true, false},
+        {"diplexcoin", "startmasternode", &startmasternode, true, true, false},
+        {"diplexcoin", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"diplexcoin", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"diplexcoin", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"diplexcoin", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"diplexcoin", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"diplexcoin", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"diplexcoin", "mnbudget", &mnbudget, true, true, false},
+        {"diplexcoin", "preparebudget", &preparebudget, true, true, false},
+        {"diplexcoin", "submitbudget", &submitbudget, true, true, false},
+        {"diplexcoin", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"diplexcoin", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"diplexcoin", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"diplexcoin", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"diplexcoin", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"diplexcoin", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"diplexcoin", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"diplexcoin", "checkbudgets", &checkbudgets, true, true, false},
+        {"diplexcoin", "mnsync", &mnsync, true, true, false},
+        {"diplexcoin", "spork", &spork, true, true, false},
+        {"diplexcoin", "getpoolinfo", &getpoolinfo, true, true, false},
 
 #ifdef ENABLE_WALLET
         /* Wallet */
@@ -616,14 +617,14 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> zija-cli " + methodname + " " + args + "\n";
+    return "> diplexcoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:51993/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:15502/\n";
 }
 
 void RPCRegisterTimerInterface(RPCTimerInterface *iface)

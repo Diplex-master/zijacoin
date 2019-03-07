@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The PIVX Core developers, @COPYRIGHT_YEAR@ The HUZU Core developers, The ZIJA Core developers @COPYRIGHT_YEAR@ The ZIJA Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The PIVX Core developers, @COPYRIGHT_YEAR@ The HUZU Core developers, @COPYRIGHT_YEAR@ The ZIJACOIN Core developers, The DLX Core developers @COPYRIGHT_YEAR@ The DLX Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>ZIJA-Qt</string>
+  <string>DLX-Qt</string>
   
   <key>CFBundleName</key>
-  <string>ZIJA-Qt</string>
+  <string>DLX-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.zija.Zija-Qt</string>
+  <string>io.diplexcoin.DiplexCoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.zija.ZijaPayment</string>
+      <string>io.diplexcoin.DiplexCoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>zija</string>
+        <string>diplexcoin</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.zija.paymentrequest</string>
+      <string>io.diplexcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Zija payment request</string>
+      <string>DiplexCoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-zija-payment-request</string>
+        <string>application/x-diplexcoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>zijapaymentrequest</string>
+          <string>diplexcoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.zija.paymentrequest</string>
+        <string>io.diplexcoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
