@@ -102,6 +102,7 @@ are held, and adds warnings to the debug.log file if inconsistencies are detecte
   - Copyright (c) 2009-2014 The Bitcoin developers
   - Copyright (c) 2015-2017 The PIVX developers
   - Copyright (c) 2017-2018 The HUZU developers
+  - Copyright (c) 2017-2018 The ZIJACOIN developers
   - Copyright (c) 2018 The DLX developers
   - Distributed under the MIT/X11 software license, see the accompanying
   - file COPYING or http://www.opensource.org/licenses/mit-license.php.
